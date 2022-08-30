@@ -8,16 +8,28 @@ import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
-    val TAG = "MainActivity"
+      val TAG = "MainActivity"
+
+    private fun showMessage(msg:String){
+        Log.i(TAG,msg)
+        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show()
+        Snackbar.make(findViewById(R.id.main_constraint_layout),msg,Snackbar.LENGTH_SHORT).show()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         showMessage("onCreate function called")
     }
-    private fun showMessage(msg:String){
-        Log.i(TAG,msg)
-        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show()
-        Snackbar.make(findViewById(R.id.main_constraint_layout),msg,Snackbar.LENGTH_SHORT).show()
+
+    override fun onStart() {
+        showMessage("onStart function called")
+        super.onStart()
+    }
+
+    override fun onPause() {
+        showMessage("onPause function called")
+        super.onPause()
     }
 
     override fun onResume() {
@@ -30,19 +42,9 @@ class MainActivity : AppCompatActivity() {
         super.onRestart()
     }
 
-    override fun onPause() {
-        showMessage("onPause function called")
-        super.onPause()
-    }
-
     override fun onStop() {
         showMessage("onStop function called")
         super.onStop()
-    }
-
-    override fun onStart() {
-        showMessage("onStart function called")
-        super.onStart()
     }
 
     override fun onDestroy() {
