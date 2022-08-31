@@ -1,2 +1,2 @@
 # MADpractical-2_20012011141
-![Screenshot (1886)](https://user-images.githubusercontent.com/89698440/187398785-5643924b-784d-4804-acd5-97969a1a3a0c.png)
+<img width="844" alt="image" src="https://user-images.githubusercontent.com/89698440/187587538-9aa439c0-872f-4bf2-915f-c2ece2eef118.png">
